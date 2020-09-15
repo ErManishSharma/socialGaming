@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context=".AccountSettings">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="5dp"
+        android:id="@+id/app_bar_layout_acc_settings">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginRight="6dp"
+            android:background="@color/white"
+            android:id="@+id/account_setings_toolbar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+               <ImageView
+                   android:id="@+id/close_settings"
+                   android:layout_width="20dp"
+                   android:layout_height="20dp"
+                   android:layout_alignParentLeft="true"
+                   android:src="@drawable/ic_arrow_back_black_24dp"/>
+                <TextView
+                    android:id="@+id/save_settings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Save"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/image_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_bar_layout_acc_settings"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/change_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/greyblue"
+            android:src="@drawable/ic_profile_black_24dp" />
+
+        <ImageView
+            android:id="@+id/img_view_item_main_list"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_gravity="bottom|right"
+            android:src="@drawable/ic_edit_black_24dp" />
+
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/acc_user_name"
+        android:layout_width="match_parent"
+        android:maxLines="1"
+        android:layout_height="wrap_content"
+        android:hint="User name"
+        android:layout_below="@+id/image_frame"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/acc_dob"
+        android:maxLines="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date of Birth"
+        android:layout_below="@+id/acc_user_name"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/acc_bio"
+        android:maxLines="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Bio"
+        android:layout_below="@+id/acc_dob"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/acc_fullname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Full name"
+        android:maxLines="1"
+        android:layout_below="@+id/acc_bio"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/switch_acc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textColor="@color/greyblue"
+        android:text="Switch Account"
+        android:layout_below="@+id/acc_fullname"/>
+
+    <TextView
+        android:id="@+id/logout_acc"
+        android:layout_marginLeft="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textColor="@color/colorAccent"
+        android:text="Logout"
+        android:layout_below="@+id/switch_acc"/>
+    <TextView
+        android:id="@+id/delete_acc"
+        android:layout_marginLeft="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textColor="@color/greyblue"
+        android:text="Delete Account"
+        android:layout_below="@+id/logout_acc"/>
+</RelativeLayout>
